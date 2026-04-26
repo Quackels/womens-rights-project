@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Women's Rights Movement: Equality Through Action</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blush: #e8c4c4;
+    --blush-light: #f5e6e6;
+    --blush-deep: #d4a0a0;
+    --white: #fdfcfc;
+    --off-white: #f9f5f5;
+    --charcoal: #2c2c2c;
+    --charcoal-mid: #4a4a4a;
+    --charcoal-light: #7a7a7a;
+    --border: #e8dede;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--white);
+    color: var(--charcoal);
+    overflow-x: hidden;
+    font-weight: 300;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(253,252,252,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 3rem; height: 64px;
+  }
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--charcoal); font-size: 1rem; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+  }
+  .nav-links { display: flex; gap: 0; list-style: none; }
+  .nav-links a {
+    color: var(--charcoal-light);
+    text-decoration: none; font-size: 0.7rem;
+    font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--charcoal); }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    background: var(--white);
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+    padding-top: 64px;
+  }
+
+  .hero-bg-line {
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: var(--border);
+    pointer-events: none;
+  }
+  .hero-bg-line:nth-child(1) { left: 25%; }
+  .hero-bg-line:nth-child(2) { left: 50%; }
+  .hero-bg-line:nth-child(3) { left: 75%; }
+
+  /* Venus symbol */
+  .venus-symbol {
+    position: absolute;
+    bottom: 6%;
+    right: 7%;
+    font-size: 14rem;
+    color: var(--blush);
+    opacity: 0.35;
+    font-family: serif;
+    line-height: 1;
+    pointer-events: none;
+    animation: slow-float 8s ease-in-out infinite;
+    user-select: none;
+  }
+  @keyframes slow-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+
+  .hero-content {
+    position: relative; z-index: 2;
+    text-align: center;
+    max-width: 820px;
+    padding: 4rem 2rem;
+    animation: fade-up 1.2s ease both;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.68rem; letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--charcoal-light);
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    font-weight: 300;
+    color: var(--charcoal);
+    line-height: 1.12;
+    margin-bottom: 0.4rem;
+  }
+  .hero-title em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--blush-deep);
+  }
+
+  .hero-divider {
+    width: 40px; height: 1px;
+    background: var(--blush-deep);
+    margin: 2rem auto;
+  }
+
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--charcoal-light);
+    line-height: 1.85;
+    max-width: 560px;
+    margin: 0 auto 3rem;
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .hero-ctas {
+    display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;
+  }
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    font-size: 0.68rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    font-family: 'Jost', sans-serif;
+  }
+  .btn-dark {
+    background: var(--charcoal);
+    color: var(--white);
+    border: 1px solid var(--charcoal);
+  }
+  .btn-dark:hover { background: var(--charcoal-mid); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--charcoal);
+    border: 1px solid var(--border);
+  }
+  .btn-outline:hover { border-color: var(--charcoal); }
+
+  .hero-scroll {
+    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 0.75rem;
+    color: var(--charcoal-light); font-size: 0.65rem; letter-spacing: 0.2em;
+    text-transform: uppercase;
+    animation: pulse-down 2.5s ease-in-out infinite;
+  }
+  .hero-scroll::after {
+    content: '';
+    width: 1px; height: 36px;
+    background: linear-gradient(to bottom, var(--charcoal-light), transparent);
+  }
+
+  @keyframes pulse-down {
+    0%, 100% { opacity: 0.5; transform: translateX(-50%) translateY(0); }
+    50% { opacity: 0.8; transform: translateX(-50%) translateY(5px); }
+  }
+
+  /* ── SECTION BASE ── */
+  section { position: relative; }
+
+  .section-label {
+    font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
+    font-weight: 400; margin-bottom: 1rem; color: var(--charcoal-light);
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .section-label::after {
+    content: ''; flex: 0 0 32px; height: 1px; background: var(--blush-deep); opacity: 0.6;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+    color: var(--charcoal);
+  }
+
+  .section-lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem; font-style: italic;
+    line-height: 1.85;
+    color: var(--charcoal-light);
+    max-width: 660px;
+    font-weight: 300;
+  }
+
+  /* ── BEFORE THE MOVEMENT ── */
+  #before {
+    background: var(--off-white);
+    padding: 7rem 0;
+    border-top: 1px solid var(--border);
+  }
+  .before-inner { max-width: 1200px; margin: 0 auto; padding: 0 3rem; }
+  .before-header { margin-bottom: 4rem; }
+
+  .before-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-bottom: 4rem;
+  }
+  .restriction-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    transition: background 0.3s;
+  }
+  .restriction-card:hover { background: var(--blush-light); }
+
+  .rc-icon { font-size: 1.5rem; margin-bottom: 1.25rem; display: block; }
+  .rc-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.01em;
+  }
+  .rc-text { font-size: 0.85rem; line-height: 1.75; color: var(--charcoal-light); }
+
+  /* Seneca Banner */
+  .seneca-banner {
+    background: var(--charcoal);
+    padding: 3rem 4rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 3rem;
+    align-items: center;
+    color: var(--white);
+  }
+  .seneca-year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem; font-weight: 300;
+    color: var(--blush);
+    line-height: 1;
+    text-align: center;
+  }
+  .seneca-year span {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--blush-deep);
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    margin-top: 0.5rem;
+  }
+  .seneca-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; font-weight: 400;
+    margin-bottom: 0.85rem;
+    color: var(--white);
+  }
+  .seneca-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; line-height: 1.85;
+    color: rgba(253,252,252,0.7);
+    font-style: italic; font-weight: 300;
+    margin-bottom: 1.25rem;
+  }
+  .seneca-quote {
+    border-left: 2px solid var(--blush);
+    padding-left: 1.25rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--blush-light);
+    font-weight: 300;
+  }
+
+  /* ── CIVIL RIGHTS ── */
+  #civil-rights {
+    background: var(--white);
+    padding: 7rem 0;
+    border-top: 1px solid var(--border);
+  }
+  .cr-inner { max-width: 1200px; margin: 0 auto; padding: 0 3rem; }
+  .cr-header { margin-bottom: 4rem; }
+
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 2.5rem;
+    align-items: stretch;
+  }
+  .comparison-col {
+    border: 1px solid var(--border);
+    padding: 2.5rem 2rem;
+    transition: border-color 0.3s;
+    background: var(--off-white);
+  }
+  .comparison-col:hover { border-color: var(--blush-deep); }
+  .comparison-col.civil { border-top: 2px solid var(--charcoal); }
+  .comparison-col.women { border-top: 2px solid var(--blush-deep); }
+
+  .col-badge {
+    display: inline-block;
+    font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+    font-weight: 500;
+    padding: 0.3rem 0.85rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--border);
+    color: var(--charcoal-light);
+  }
+  .col-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem; font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: var(--charcoal);
+  }
+  .tactic-item { display: flex; align-items: flex-start; gap: 0.85rem; margin-bottom: 0.9rem; }
+  .tactic-dot {
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    margin-top: 0.55rem;
+    flex-shrink: 0;
+  }
+  .civil .tactic-dot { background: var(--charcoal); }
+  .women .tactic-dot { background: var(--blush-deep); }
+  .tactic-text { font-size: 0.87rem; line-height: 1.7; color: var(--charcoal-mid); }
+
+  .comparison-arrow {
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 0.75rem;
+    color: var(--blush-deep);
+    font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .arrow-icon {
+    font-size: 1.75rem;
+    animation: pulse-lr 2s ease-in-out infinite;
+    opacity: 0.6;
+  }
+  @keyframes pulse-lr {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.15); opacity: 0.8; }
+  }
+
+  /* ── TIMELINE ── */
+  #timeline {
+    background: var(--off-white);
+    padding: 7rem 0;
+    border-top: 1px solid var(--border);
+  }
+  .timeline-inner { max-width: 1000px; margin: 0 auto; padding: 0 3rem; }
+  .timeline-header { margin-bottom: 4rem; }
+
+  .tl-track { position: relative; }
+  .tl-track::before {
+    content: '';
+    position: absolute;
+    left: 80px;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: var(--border);
+  }
+
+  .tl-item {
+    display: grid;
+    grid-template-columns: 80px auto 1fr;
+    gap: 0 2rem;
+    margin-bottom: 2rem;
+    align-items: start;
+  }
+  .tl-year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; font-weight: 500;
+    color: var(--charcoal-light);
+    text-align: right;
+    padding-top: 0.2rem;
+    letter-spacing: 0.02em;
+  }
+  .tl-dot-wrap {
+    display: flex; flex-direction: column; align-items: center;
+    position: relative; z-index: 1;
+  }
+  .tl-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 1.5px solid var(--blush-deep);
+    transition: all 0.25s;
+  }
+  .tl-item:hover .tl-dot { background: var(--blush-deep); transform: scale(1.3); }
+
+  .tl-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 1.25rem 1.5rem;
+    transition: all 0.3s;
+  }
+  .tl-item:hover .tl-card {
+    border-color: var(--blush-deep);
+    transform: translateX(3px);
+  }
+  .tl-event {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem; font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 0.4rem;
+  }
+  .tl-desc { font-size: 0.85rem; line-height: 1.75; color: var(--charcoal-light); }
+  .tl-today .tl-year { color: var(--blush-deep); font-style: italic; }
+  .tl-today .tl-dot { border-color: var(--blush-deep); }
+  .tl-today .tl-card { background: var(--blush-light); border-color: var(--blush-deep); }
+
+  /* ── LEADERS ── */
+  #leaders {
+    background: var(--charcoal);
+    padding: 7rem 0;
+    border-top: 1px solid #3a3a3a;
+  }
+  .leaders-inner { max-width: 1200px; margin: 0 auto; padding: 0 3rem; }
+  .leaders-header { margin-bottom: 4rem; }
+  .leaders-header .section-label { color: rgba(253,252,252,0.4); }
+  .leaders-header .section-label::after { background: var(--blush); }
+  .leaders-header .section-title { color: var(--white); }
+
+  .leaders-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .leader-card {
+    background: #2c2c2c;
+    padding: 2.5rem 2rem;
+    transition: all 0.3s;
+    cursor: default;
+  }
+  .leader-card:hover { background: #363636; }
+
+  .leader-avatar {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: var(--blush);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 1.5rem;
+  }
+  .leader-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem; font-weight: 500;
+    color: var(--white);
+    margin-bottom: 0.2rem;
+  }
+  .leader-years {
+    font-size: 0.7rem; color: var(--blush); letter-spacing: 0.12em;
+    margin-bottom: 1rem; font-weight: 400;
+  }
+  .leader-bio {
+    font-size: 0.85rem; line-height: 1.75;
+    color: rgba(253,252,252,0.55);
+    margin-bottom: 1.25rem;
+  }
+  .leader-tag {
+    display: inline-block;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--blush);
+    border: 1px solid rgba(232,196,196,0.25);
+    padding: 0.25rem 0.65rem;
+  }
+
+  /* ── ACTIVISM ── */
+  #activism {
+    background: var(--white);
+    padding: 7rem 0;
+    border-top: 1px solid var(--border);
+  }
+  .activism-inner { max-width: 1200px; margin: 0 auto; padding: 0 3rem; }
+  .activism-header { margin-bottom: 4rem; }
+
+  .activism-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-bottom: 3.5rem;
+  }
+  .activism-card {
+    background: var(--white);
+    padding: 2rem 1.75rem;
+    transition: all 0.3s;
+  }
+  .activism-card:hover {
+    background: var(--blush-light);
+  }
+  .activism-icon { font-size: 1.6rem; margin-bottom: 1rem; display: block; }
+  .activism-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--charcoal);
+  }
+  .activism-desc { font-size: 0.82rem; line-height: 1.75; color: var(--charcoal-light); }
+
+  .pull-quote {
+    background: var(--blush-light);
+    border: 1px solid var(--blush-deep);
+    border-left: 3px solid var(--blush-deep);
+    padding: 3rem 4rem;
+    text-align: center;
+  }
+  .pull-quote blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.55rem);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--charcoal);
+    margin-bottom: 1rem;
+  }
+  .pull-quote cite {
+    font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--charcoal-light);
+    font-style: normal;
+  }
+
+  /* ── LAWS ── */
+  #laws {
+    background: var(--off-white);
+    padding: 7rem 0;
+    border-top: 1px solid var(--border);
+  }
+  .laws-inner { max-width: 1200px; margin: 0 auto; padding: 0 3rem; }
+  .laws-header { margin-bottom: 4rem; }
+
+  .laws-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .law-card {
+    background: var(--white);
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+  .law-card:hover { background: var(--blush-light); }
+  .law-header {
+    background: var(--blush-light);
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 1.25rem;
+  }
+  .law-year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; font-weight: 400;
+    color: var(--charcoal);
+    line-height: 1;
+  }
+  .law-name { font-size: 0.82rem; font-weight: 400; color: var(--charcoal-mid); line-height: 1.4; letter-spacing: 0.02em; }
+  .law-body { padding: 1.5rem; }
+  .law-desc { font-size: 0.85rem; line-height: 1.75; color: var(--charcoal-light); }
+  .law-impact {
+    margin-top: 1rem;
+    padding: 0.65rem 0.85rem;
+    background: var(--blush-light);
+    border-left: 2px solid var(--blush-deep);
+    font-size: 0.78rem;
+    color: var(--charcoal-mid);
+    font-style: italic;
+  }
+
+  /* ── TODAY ── */
+  #today {
+    background: var(--white);
+    padding: 7rem 0;
+    border-top: 1px solid var(--border);
+  }
+  .today-inner { max-width: 1200px; margin: 0 auto; padding: 0 3rem; }
+  .today-header { margin-bottom: 4rem; }
+
+  .today-issues {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .issue-card {
+    background: var(--off-white);
+    padding: 2rem;
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+  .issue-card:hover { border-color: var(--blush-deep); }
+  .issue-icon { font-size: 1.6rem; margin-bottom: 1rem; }
+  .issue-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 0.6rem;
+  }
+  .issue-text {
+    font-size: 0.85rem; line-height: 1.75;
+    color: var(--charcoal-light);
+    margin-bottom: 1.25rem;
+  }
+
+  .progress-label {
+    display: flex; justify-content: space-between;
+    font-size: 0.68rem; font-weight: 400;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--charcoal-light);
+    margin-bottom: 0.4rem;
+  }
+  .progress-bar {
+    height: 3px;
+    background: var(--border);
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--blush-deep), var(--charcoal));
+    transition: width 1.2s ease;
+  }
+
+  /* ── QUIZ ── */
+  #quiz {
+    background: var(--off-white);
+    padding: 7rem 0;
+    border-top: 1px solid var(--border);
+  }
+  .quiz-inner { max-width: 760px; margin: 0 auto; padding: 0 3rem; }
+  .quiz-header { text-align: center; margin-bottom: 3rem; }
+  .quiz-header .section-label { justify-content: center; }
+  .quiz-header .section-label::after { max-width: 40px; }
+
+  .quiz-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 3rem;
+  }
+  .quiz-question {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; font-weight: 400;
+    margin-bottom: 2rem;
+    line-height: 1.55;
+    color: var(--charcoal);
+  }
+  .quiz-options { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.5rem; }
+  .quiz-option {
+    display: flex; align-items: center; gap: 1rem;
+    background: var(--off-white);
+    border: 1px solid var(--border);
+    padding: 0.9rem 1.25rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.88rem;
+    color: var(--charcoal-mid);
+  }
+  .quiz-option:hover { border-color: var(--blush-deep); background: var(--blush-light); }
+  .quiz-option.correct { background: #f0f7f0; border-color: #7ab07a; color: #3a6a3a; }
+  .quiz-option.wrong { background: #fdf0f0; border-color: var(--blush-deep); color: #8a3a3a; }
+  .quiz-option-letter {
+    width: 26px; height: 26px;
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.72rem; font-weight: 400; letter-spacing: 0.05em;
+    flex-shrink: 0; color: var(--charcoal-light);
+  }
+  .quiz-feedback {
+    min-height: 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem; font-style: italic;
+    color: var(--charcoal-mid);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .quiz-nav { display: flex; justify-content: space-between; align-items: center; }
+  .quiz-progress { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--charcoal-light); }
+  .quiz-score { text-align: center; padding: 2rem; }
+  .quiz-score-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem; font-weight: 300;
+    color: var(--blush-deep);
+  }
+  .quiz-score-label { font-size: 1rem; color: var(--charcoal-light); margin-top: 0.5rem; font-style: italic; font-family: 'Cormorant Garamond', serif; }
+
+  /* ── CONCLUSION ── */
+  #conclusion {
+    background: var(--charcoal);
+    padding: 8rem 0;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+  #conclusion::before {
+    content: '♀';
+    position: absolute;
+    font-size: 28rem;
+    color: rgba(232,196,196,0.04);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; font-family: serif;
+  }
+  .conclusion-inner {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    position: relative; z-index: 1;
+  }
+  .conclusion-eyebrow {
+    font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--blush-deep); font-weight: 400;
+    margin-bottom: 1.75rem;
+  }
+  .conclusion-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 300;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    line-height: 1.15;
+  }
+  .conclusion-title em { font-style: italic; color: var(--blush); }
+  .conclusion-divider { width: 40px; height: 1px; background: var(--blush-deep); margin: 2rem auto; }
+  .conclusion-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; line-height: 1.9;
+    color: rgba(253,252,252,0.6);
+    font-style: italic; font-weight: 300;
+    margin-bottom: 3.5rem;
+  }
+  .conclusion-stats {
+    display: flex; justify-content: center; gap: 4rem;
+    margin-bottom: 3.5rem; flex-wrap: wrap;
+  }
+  .c-stat { text-align: center; }
+  .c-stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem; font-weight: 300;
+    color: var(--blush); display: block;
+  }
+  .c-stat-label {
+    font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(253,252,252,0.35);
+    margin-top: 0.35rem;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #222;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid #3a3a3a;
+  }
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: var(--blush);
+    margin-bottom: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+  }
+  .footer-note {
+    font-size: 0.75rem;
+    color: rgba(253,252,252,0.25);
+    line-height: 1.8;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reveal {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── BIBLIOGRAPHY ── */
+  #bibliography {
+    background: var(--off-white);
+    padding: 7rem 0;
+    border-top: 1px solid var(--border);
+  }
+  .bib-inner { max-width: 1000px; margin: 0 auto; padding: 0 3rem; }
+  .bib-header { margin-bottom: 3rem; }
+
+  .bib-tabs {
+    display: flex; gap: 0.5rem;
+    margin-bottom: 3rem; flex-wrap: wrap;
+  }
+  .bib-tab {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.68rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    background: var(--white);
+    color: var(--charcoal-light);
+    transition: all 0.2s;
+  }
+  .bib-tab.active, .bib-tab:hover {
+    background: var(--charcoal);
+    color: var(--white);
+    border-color: var(--charcoal);
+  }
+
+  .bib-panel { display: none; }
+  .bib-panel.active { display: block; }
+
+  .bib-category { margin-bottom: 3rem; }
+  .bib-cat-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 0.6rem;
+    letter-spacing: 0.02em;
+  }
+  .bib-cat-icon { font-size: 1rem; }
+
+  .bib-entry {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 0 1rem;
+    align-items: baseline;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.2s;
+  }
+  .bib-entry:last-child { border-bottom: none; }
+  .bib-entry:hover { background: var(--blush-light); padding-left: 0.5rem; margin-left: -0.5rem; }
+  .bib-num {
+    font-size: 0.7rem; font-weight: 400;
+    color: var(--blush-deep);
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .bib-cite {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.92rem; line-height: 1.75;
+    color: var(--charcoal);
+  }
+  .bib-cite em { font-style: italic; }
+  .bib-cite .bib-author { font-weight: 500; }
+  .bib-cite .bib-note {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--charcoal-light);
+    margin-top: 0.25rem;
+    font-style: italic;
+  }
+  .bib-cite a {
+    color: var(--charcoal-mid);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--blush-deep);
+    transition: color 0.2s;
+  }
+  .bib-cite a:hover { color: var(--blush-deep); }
+
+  .bib-format-note {
+    margin-top: 2rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--blush-light);
+    border: 1px solid var(--blush);
+    font-size: 0.82rem;
+    color: var(--charcoal-light);
+    line-height: 1.7;
+  }
+  .bib-format-note strong { color: var(--charcoal); font-weight: 500; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .before-grid { grid-template-columns: repeat(2, 1fr); }
+    .comparison-grid { grid-template-columns: 1fr; }
+    .comparison-arrow { display: none; }
+    .leaders-grid { grid-template-columns: repeat(2, 1fr); }
+    .activism-grid { grid-template-columns: repeat(2, 1fr); }
+    .laws-grid { grid-template-columns: repeat(2, 1fr); }
+    .today-issues { grid-template-columns: repeat(2, 1fr); }
+    .seneca-banner { grid-template-columns: 1fr; text-align: center; }
+    .nav-links { display: none; }
+    .pull-quote { padding: 2rem; }
+    nav { padding: 0 1.5rem; }
+  }
+  @media (max-width: 600px) {
+    .before-grid { grid-template-columns: 1fr; }
+    .leaders-grid { grid-template-columns: 1fr; }
+    .activism-grid { grid-template-columns: 1fr; }
+    .laws-grid { grid-template-columns: 1fr; }
+    .today-issues { grid-template-columns: 1fr; }
+    .tl-item { grid-template-columns: 60px auto 1fr; }
+    .conclusion-stats { gap: 2rem; }
+    .before-inner, .cr-inner, .timeline-inner, .leaders-inner,
+    .activism-inner, .laws-inner, .today-inner, .quiz-inner,
+    .conclusion-inner, .bib-inner { padding: 0 1.5rem; }
+    .seneca-banner { padding: 2rem 1.5rem; }
+    .quiz-card { padding: 2rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">Women's Rights Movement</div>
+  <ul class="nav-links">
+    <li><a href="#before">History</a></li>
+    <li><a href="#civil-rights">Origins</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#leaders">Leaders</a></li>
+    <li><a href="#laws">Laws</a></li>
+    <li><a href="#today">Today</a></li>
+    <li><a href="#quiz">Quiz</a></li>
+    <li><a href="#bibliography">Sources</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-line"></div>
+  <div class="hero-bg-line"></div>
+  <div class="hero-bg-line"></div>
+  <div class="venus-symbol" aria-hidden="true">♀</div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">An Educational Resource</div>
+    <h1 class="hero-title">
+      The Women's Rights Movement:<br>
+      <em>Equality Through Action</em>
+    </h1>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">
+      From Seneca Falls to Title IX to today's fights for equality, women transformed American society through protest, law, and persistence.
+    </p>
+    <div class="hero-ctas">
+      <a href="#timeline" class="btn btn-dark">Explore Timeline</a>
+      <a href="#leaders" class="btn btn-outline">Meet the Leaders</a>
+      <a href="#laws" class="btn btn-outline">Laws That Changed America</a>
+      <a href="#today" class="btn btn-outline">Women's Rights Today</a>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll to explore</div>
+</section>
+
+<!-- BEFORE THE MOVEMENT -->
+<section id="before">
+  <div class="before-inner">
+    <div class="before-header reveal">
+      <div class="section-label">Part 1</div>
+      <h2 class="section-title">Before the Movement:<br>How Women Were Marginalized</h2>
+      <p class="section-lead">For most of American history, women were legally and socially confined to narrow roles—denied fundamental rights that men took for granted. Understanding these restrictions is essential to appreciating the struggle that followed.</p>
+    </div>
+
+    <div class="before-grid reveal">
+      <div class="restriction-card">
+        <span class="rc-icon">🗳️</span>
+        <div class="rc-title">No Voting Rights Until 1920</div>
+        <div class="rc-text">Women were entirely excluded from democratic participation for the nation's first 144 years. The 19th Amendment, ratified in 1920, finally granted women the right to vote—decades after the fight began.</div>
+      </div>
+      <div class="restriction-card">
+        <span class="rc-icon">🏠</span>
+        <div class="rc-title">Property Restrictions</div>
+        <div class="rc-text">Married women could not own property independently under coverture laws. Their legal identity was subsumed by their husbands', leaving them with few financial rights or protections.</div>
+      </div>
+      <div class="restriction-card">
+        <span class="rc-icon">🎓</span>
+        <div class="rc-title">Limited Education</div>
+        <div class="rc-text">Higher education was largely closed to women. Most universities refused female applicants, and those who did attend faced discrimination, limited programs, and discouragement from academic careers.</div>
+      </div>
+      <div class="restriction-card">
+        <span class="rc-icon">💼</span>
+        <div class="rc-title">Workplace Discrimination</div>
+        <div class="rc-text">Women were steered into low-paying "pink collar" jobs, barred from most professions, and routinely paid less than men for the same work. Discrimination in hiring and promotion was legal and commonplace.</div>
+      </div>
+      <div class="restriction-card">
+        <span class="rc-icon">👨‍👩‍👧</span>
+        <div class="rc-title">Rigid Domestic Expectations</div>
+        <div class="rc-text">Women's primary role was defined as wife and mother. Those who pursued careers or independence faced social stigma, family pressure, and legal obstacles that reinforced a subordinate domestic status.</div>
+      </div>
+      <div class="restriction-card">
+        <span class="rc-icon">⚖️</span>
+        <div class="rc-title">Male-Dominated Law & Politics</div>
+        <div class="rc-text">Women could not serve on juries, hold most public offices, or practice law in many states. The legal system was built by men, for men—leaving women without recourse or representation in the halls of power.</div>
+      </div>
+    </div>
+
+    <div class="seneca-banner reveal">
+      <div class="seneca-year">1848<span>Turning Point</span></div>
+      <div>
+        <div class="seneca-title">The Seneca Falls Convention</div>
+        <div class="seneca-text">Organized by Elizabeth Cady Stanton and Lucretia Mott in Seneca Falls, New York, the first women's rights convention in U.S. history drew 300 attendees to debate the "Declaration of Sentiments"—a bold document modeled on the Declaration of Independence, asserting that "all men and women are created equal."</div>
+        <div class="seneca-quote">"We hold these truths to be self-evident: that all men and women are created equal." — Declaration of Sentiments, 1848</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CIVIL RIGHTS CONNECTION -->
+<section id="civil-rights">
+  <div class="cr-inner">
+    <div class="cr-header reveal">
+      <div class="section-label">Part 2</div>
+      <h2 class="section-title">Inspired by the Civil Rights Movement</h2>
+      <p class="section-lead">The Black Civil Rights Movement of the 1950s and 60s demonstrated a crucial lesson: organized, persistent, nonviolent protest could change the law. Women who participated in civil rights work carried those strategies directly into the fight for gender equality.</p>
+    </div>
+
+    <div class="comparison-grid reveal">
+      <div class="comparison-col civil">
+        <div class="col-badge">Civil Rights Movement</div>
+        <div class="col-heading">1950s–60s Black Freedom Struggle</div>
+        <div class="tactic-item"><div class="tactic-dot"></div><div class="tactic-text">Sit-ins and nonviolent direct action challenged segregation in public spaces</div></div>
+        <div class="tactic-item"><div class="tactic-dot"></div><div class="tactic-text">Mass marches like the 1963 March on Washington drew national attention</div></div>
+        <div class="tactic-item"><div class="tactic-dot"></div><div class="tactic-text">Legal challenges in federal court, culminating in landmark Supreme Court victories</div></div>
+        <div class="tactic-item"><div class="tactic-dot"></div><div class="tactic-text">Grassroots organizing through churches and community networks</div></div>
+        <div class="tactic-item"><div class="tactic-dot"></div><div class="tactic-text">Demands for full equal citizenship and enforcement of constitutional rights</div></div>
+        <div class="tactic-item"><div class="tactic-dot"></div><div class="tactic-text">Media strategy to expose injustice to national and international audiences</div></div>
+      </div>
+      <div class="comparison-arrow">
+        <div class="arrow-icon">⇄</div>
+        <div style="writing-mode:vertical-lr;transform:rotate(180deg);font-size:0.6rem;letter-spacing:0.15em;opacity:0.5">Inspired &amp; Informed</div>
+      </div>
+      <div class="comparison-col women">
+        <div class="col-badge">Women's Rights Movement</div>
+        <div class="col-heading">1960s–70s Gender Equality Fight</div>
+        <div class="tactic-item"><div class="tactic-dot"></div><div class="tactic-text">Pickets, marches, and demonstrations challenged gender discrimination publicly</div></div>
+        <div class="tactic-item"><div class="tactic-dot"></div><div class="tactic-text">The 1970 Women's Strike for Equality mobilized hundreds of thousands nationwide</div></div>
+        <div class="tactic-item"><div class="tactic-dot"></div><div class="tactic-text">Strategic litigation expanded rights through cases like <em>Griswold v. Connecticut</em></div></div>
+        <div class="tactic-item"><div class="tactic-dot"></div><div class="tactic-text">Consciousness-raising groups built solidarity and political awareness locally</div></div>
+        <div class="tactic-item"><div class="tactic-dot"></div><div class="tactic-text">Demanded equal pay, workplace protections, educational access, and bodily autonomy</div></div>
+        <div class="tactic-item"><div class="tactic-dot"></div><div class="tactic-text">Feminist publications like <em>Ms. Magazine</em> shaped public narrative and debate</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="timeline-inner">
+    <div class="timeline-header reveal">
+      <div class="section-label">Part 3</div>
+      <h2 class="section-title">Timeline of Major Events</h2>
+      <p class="section-lead">From the earliest conventions to modern legal battles, the women's rights movement has been shaped by decades of determined organizing and hard-won legislative change.</p>
+    </div>
+
+    <div class="tl-track reveal">
+      <div class="tl-item">
+        <div class="tl-year">1848</div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <div class="tl-event">Seneca Falls Convention</div>
+          <div class="tl-desc">The first organized women's rights convention in the U.S. produces the Declaration of Sentiments, demanding voting rights and equal treatment under the law.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1869</div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <div class="tl-event">National Woman Suffrage Association Founded</div>
+          <div class="tl-desc">Elizabeth Cady Stanton and Susan B. Anthony form the NWSA to campaign for a constitutional amendment granting women the vote.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1920</div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <div class="tl-event">19th Amendment Ratified</div>
+          <div class="tl-desc">Women gain the constitutional right to vote, 72 years after Seneca Falls. It is one of the most significant expansions of democracy in U.S. history.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1963</div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <div class="tl-event">Equal Pay Act Signed</div>
+          <div class="tl-desc">The first federal law prohibiting sex-based wage discrimination requires that men and women receive equal pay for equal work in the same establishment.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1963</div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <div class="tl-event">Betty Friedan Publishes <em>The Feminine Mystique</em></div>
+          <div class="tl-desc">Friedan's landmark book challenges the cultural myth that women find fulfillment only in domesticity, igniting a new wave of feminist consciousness.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1964</div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <div class="tl-event">Civil Rights Act Title VII</div>
+          <div class="tl-desc">Prohibits employment discrimination based on sex, race, color, religion, and national origin. Sex was added partly to defeat the bill—but it passed, transforming workplaces nationwide.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1965</div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <div class="tl-event">Griswold v. Connecticut</div>
+          <div class="tl-desc">The Supreme Court rules that married couples have a constitutional right to use contraception, establishing a right to privacy with major implications for women's autonomy.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1966</div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <div class="tl-event">National Organization for Women Founded</div>
+          <div class="tl-desc">Betty Friedan and Pauli Murray co-found NOW to take action against sex discrimination, particularly in enforcing Title VII. It becomes the largest feminist organization in the U.S.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1972</div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <div class="tl-event">Title IX Education Amendments</div>
+          <div class="tl-desc">Prohibits sex discrimination in any education program receiving federal funding, dramatically expanding women's access to higher education and transforming women's athletics.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1973</div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <div class="tl-event">Roe v. Wade</div>
+          <div class="tl-desc">The Supreme Court establishes a constitutional right to abortion, ruling that privacy rights extend to reproductive decisions. It remains a defining and contested precedent in American law.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1986</div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <div class="tl-event">Meritor Savings Bank v. Vinson</div>
+          <div class="tl-desc">The Supreme Court unanimously rules that sexual harassment in the workplace constitutes illegal sex discrimination under Title VII, a landmark victory for workplace rights.</div>
+        </div>
+      </div>
+      <div class="tl-item tl-today">
+        <div class="tl-year">Today</div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <div class="tl-event">An Ongoing Struggle</div>
+          <div class="tl-desc">The movement continues: debates over pay equity, reproductive rights, political representation, workplace safety, and the rights of all women—including women of color, LGBTQ+ women, and disabled women.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEY LEADERS -->
+<section id="leaders">
+  <div class="leaders-inner">
+    <div class="leaders-header reveal">
+      <div class="section-label">Part 4</div>
+      <h2 class="section-title">Key Figures Who Shaped the Movement</h2>
+    </div>
+    <div class="leaders-grid reveal">
+      <div class="leader-card">
+        <div class="leader-avatar">ES</div>
+        <div class="leader-name">Elizabeth Cady Stanton</div>
+        <div class="leader-years">1815–1902</div>
+        <div class="leader-bio">Co-organizer of the Seneca Falls Convention, Stanton authored the Declaration of Sentiments and helped launch the American suffrage movement. A prolific writer and philosopher of women's rights, she argued that women deserved full intellectual, political, and legal equality.</div>
+        <div class="leader-tag">Suffrage Leader</div>
+      </div>
+      <div class="leader-card">
+        <div class="leader-avatar">LM</div>
+        <div class="leader-name">Lucretia Mott</div>
+        <div class="leader-years">1793–1880</div>
+        <div class="leader-bio">Quaker minister, abolitionist, and women's rights pioneer, Mott co-organized Seneca Falls after being excluded from an anti-slavery convention because of her gender. She embodied the connection between abolitionism and women's liberation.</div>
+        <div class="leader-tag">Abolitionist &amp; Organizer</div>
+      </div>
+      <div class="leader-card">
+        <div class="leader-avatar">SA</div>
+        <div class="leader-name">Susan B. Anthony</div>
+        <div class="leader-years">1820–1906</div>
+        <div class="leader-bio">The most iconic face of the suffrage movement, Anthony co-founded the National Woman Suffrage Association, organized nationwide campaigns, and was arrested in 1872 for voting illegally. She dedicated her life to a constitutional amendment she would not live to see ratified.</div>
+        <div class="leader-tag">Suffragist &amp; Activist</div>
+      </div>
+      <div class="leader-card">
+        <div class="leader-avatar">BF</div>
+        <div class="leader-name">Betty Friedan</div>
+        <div class="leader-years">1921–2006</div>
+        <div class="leader-bio">Author of <em>The Feminine Mystique</em> (1963), Friedan articulated the quiet desperation of educated women confined to suburban domesticity. She co-founded the National Organization for Women in 1966 and championed women's entry into professional life.</div>
+        <div class="leader-tag">Author &amp; NOW Co-Founder</div>
+      </div>
+      <div class="leader-card">
+        <div class="leader-avatar">GS</div>
+        <div class="leader-name">Gloria Steinem</div>
+        <div class="leader-years">1934–</div>
+        <div class="leader-bio">Journalist, activist, and co-founder of <em>Ms. Magazine</em>, Steinem became the defining public voice of second-wave feminism. Her work on reproductive rights, intersectionality, and media representation shaped how millions of Americans understood gender equality.</div>
+        <div class="leader-tag">Journalist &amp; Organizer</div>
+      </div>
+      <div class="leader-card">
+        <div class="leader-avatar">PM</div>
+        <div class="leader-name">Pauli Murray</div>
+        <div class="leader-years">1910–1985</div>
+        <div class="leader-bio">Legal scholar, civil rights activist, and feminist theorist, Murray coined the term "Jane Crow" to describe discrimination against Black women. She co-founded NOW, influenced Thurgood Marshall's legal strategies, and later became the first Black woman ordained as an Episcopal priest.</div>
+        <div class="leader-tag">Lawyer &amp; Theorist</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW THEY FOUGHT -->
+<section id="activism">
+  <div class="activism-inner">
+    <div class="activism-header reveal">
+      <div class="section-label">Part 5</div>
+      <h2 class="section-title">How Women Fought Back:<br>Methods of Activism</h2>
+      <p class="section-lead">The women's rights movement succeeded because activists used every available tool—from the street to the courtroom, from grassroots organizing to national media campaigns.</p>
+    </div>
+
+    <div class="activism-grid reveal">
+      <div class="activism-card">
+        <span class="activism-icon">✊</span>
+        <div class="activism-name">Marches &amp; Protests</div>
+        <div class="activism-desc">Mass demonstrations like the 1970 Women's Strike for Equality made demands visible and unmistakable, drawing hundreds of thousands into public spaces nationwide.</div>
+      </div>
+      <div class="activism-card">
+        <span class="activism-icon">🏛️</span>
+        <div class="activism-name">Lobbying Congress</div>
+        <div class="activism-desc">Women's organizations sent delegations to Washington, built coalitions with sympathetic legislators, and applied sustained pressure to pass landmark legislation.</div>
+      </div>
+      <div class="activism-card">
+        <span class="activism-icon">⚖️</span>
+        <div class="activism-name">Court Cases</div>
+        <div class="activism-desc">Strategic litigation challenged discriminatory laws in federal court. Attorneys like Ruth Bader Ginsburg systematically dismantled sex discrimination through the legal system.</div>
+      </div>
+      <div class="activism-card">
+        <span class="activism-icon">🌱</span>
+        <div class="activism-name">Grassroots Organizing</div>
+        <div class="activism-desc">Local chapters of NOW and other organizations registered voters, trained activists, and built community power that translated into national political influence.</div>
+      </div>
+      <div class="activism-card">
+        <span class="activism-icon">📰</span>
+        <div class="activism-name">Media Campaigns</div>
+        <div class="activism-desc">Feminist publications like <em>Ms. Magazine</em> and sympathetic journalists put women's issues before a national audience, shaping public opinion and political will.</div>
+      </div>
+      <div class="activism-card">
+        <span class="activism-icon">💬</span>
+        <div class="activism-name">Consciousness-Raising</div>
+        <div class="activism-desc">Small group discussions helped women recognize that personal struggles were political. These gatherings built solidarity, analyzed power structures, and mobilized participants.</div>
+      </div>
+      <div class="activism-card">
+        <span class="activism-icon">💪</span>
+        <div class="activism-name">Workplace Advocacy</div>
+        <div class="activism-desc">Women organized in unions, filed EEOC complaints, and challenged discriminatory employers—expanding rights for working women across industries.</div>
+      </div>
+      <div class="activism-card">
+        <span class="activism-icon">📚</span>
+        <div class="activism-name">Writing &amp; Scholarship</div>
+        <div class="activism-desc">Feminist theory and literature like Friedan's <em>Feminine Mystique</em> and Steinem's journalism gave the movement intellectual depth and persuasive power.</div>
+      </div>
+    </div>
+
+    <div class="pull-quote reveal">
+      <blockquote>"The story of women's struggle for equality belongs to no single feminist nor to any one organization but to the collective efforts of all who care about human rights."</blockquote>
+      <cite>— Gloria Steinem</cite>
+    </div>
+  </div>
+</section>
+
+<!-- LAWS -->
+<section id="laws">
+  <div class="laws-inner">
+    <div class="laws-header reveal">
+      <div class="section-label">Part 6</div>
+      <h2 class="section-title">Laws &amp; Court Cases<br>That Changed America</h2>
+      <p class="section-lead">The movement's most enduring victories were written into law and argued before the courts. These landmark decisions transformed the legal landscape for all American women.</p>
+    </div>
+
+    <div class="laws-grid reveal">
+      <div class="law-card">
+        <div class="law-header">
+          <div class="law-year">1963</div>
+          <div class="law-name">Equal Pay Act</div>
+        </div>
+        <div class="law-body">
+          <div class="law-desc">The first federal law prohibiting sex-based wage discrimination. Requires equal pay for men and women performing substantially the same work in the same establishment. Signed by President Kennedy, it marked the first federal recognition of gender pay discrimination.</div>
+          <div class="law-impact">Impact: Created legal basis for challenging pay discrimination; enforcement has continued to evolve.</div>
+        </div>
+      </div>
+      <div class="law-card">
+        <div class="law-header">
+          <div class="law-year">1964</div>
+          <div class="law-name">Civil Rights Act — Title VII</div>
+        </div>
+        <div class="law-body">
+          <div class="law-desc">Prohibits employment discrimination on the basis of race, color, religion, sex, or national origin. The inclusion of "sex" was added by an opponent hoping to kill the bill—but it passed, making sex discrimination in the workplace federally illegal.</div>
+          <div class="law-impact">Impact: Foundation for nearly all employment discrimination law; gave rise to the EEOC.</div>
+        </div>
+      </div>
+      <div class="law-card">
+        <div class="law-header">
+          <div class="law-year">1965</div>
+          <div class="law-name">Griswold v. Connecticut</div>
+        </div>
+        <div class="law-body">
+          <div class="law-desc">The Supreme Court struck down Connecticut's law banning contraceptives, ruling it violated a constitutional right to marital privacy. The decision established the privacy doctrine later extended in Roe v. Wade and subsequent reproductive rights cases.</div>
+          <div class="law-impact">Impact: Established constitutional privacy rights; precedent for later reproductive freedom rulings.</div>
+        </div>
+      </div>
+      <div class="law-card">
+        <div class="law-header">
+          <div class="law-year">1972</div>
+          <div class="law-name">Title IX Education Amendments</div>
+        </div>
+        <div class="law-body">
+          <div class="law-desc">Prohibits sex discrimination in any education program or activity receiving federal financial assistance. Transformed women's access to universities, professional schools, and athletics. The number of women in college sports exploded in the decades following its passage.</div>
+          <div class="law-impact">Impact: Transformed women's sports and dramatically expanded college enrollment for women.</div>
+        </div>
+      </div>
+      <div class="law-card">
+        <div class="law-header">
+          <div class="law-year">1973</div>
+          <div class="law-name">Roe v. Wade</div>
+        </div>
+        <div class="law-body">
+          <div class="law-desc">The Supreme Court ruled 7-2 that the Constitution's privacy protections extended to a woman's decision to terminate a pregnancy. It established a trimester framework balancing reproductive rights against state interests—and became the most contested Supreme Court decision in modern American history. Overturned in 2022 (Dobbs v. Jackson).</div>
+          <div class="law-impact">Impact: Defined reproductive rights debate for five decades; overturned in 2022 by Dobbs decision.</div>
+        </div>
+      </div>
+      <div class="law-card">
+        <div class="law-header">
+          <div class="law-year">1986</div>
+          <div class="law-name">Meritor Savings Bank v. Vinson</div>
+        </div>
+        <div class="law-body">
+          <div class="law-desc">The Supreme Court unanimously ruled that workplace sexual harassment constitutes illegal sex discrimination under Title VII. The case involved a bank employee who experienced severe, pervasive harassment from her supervisor. The decision created the legal framework for modern harassment law.</div>
+          <div class="law-impact">Impact: Created legal basis for sexual harassment claims; transformed workplace culture and HR practices.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TODAY -->
+<section id="today">
+  <div class="today-inner">
+    <div class="today-header reveal">
+      <div class="section-label">Part 7</div>
+      <h2 class="section-title">Women's Rights Today:<br>Progress &amp; Ongoing Challenges</h2>
+      <p class="section-lead">Legal victories transformed opportunity—but full equality remains unfinished. Today's movement grapples with structural inequalities that laws alone cannot resolve.</p>
+    </div>
+
+    <div class="today-issues reveal">
+      <div class="issue-card">
+        <div class="issue-icon">💰</div>
+        <div class="issue-title">The Wage Gap</div>
+        <div class="issue-text">Women earn approximately 82 cents for every dollar men earn. For Black and Latina women, the gap is even wider. The disparity reflects occupational segregation, caregiving penalties, and ongoing discrimination.</div>
+        <div class="progress-label"><span>Progress Made</span><span>82¢ / $1</span></div>
+        <div class="progress-bar"><div class="progress-fill" style="width:82%"></div></div>
+      </div>
+      <div class="issue-card">
+        <div class="issue-icon">🏛️</div>
+        <div class="issue-title">Political Representation</div>
+        <div class="issue-text">The 118th Congress is the most diverse in history—yet women still hold only about 28% of congressional seats and fewer than 30% of state legislative seats, far below their share of the population.</div>
+        <div class="progress-label"><span>Women in Congress</span><span>~28%</span></div>
+        <div class="progress-bar"><div class="progress-fill" style="width:28%"></div></div>
+      </div>
+      <div class="issue-card">
+        <div class="issue-icon">🚫</div>
+        <div class="issue-title">Workplace Harassment</div>
+        <div class="issue-text">The #MeToo movement revealed the breadth of workplace harassment and assault. Studies suggest more than 1 in 3 women experience harassment at work—yet most incidents go unreported due to fear of retaliation.</div>
+        <div class="progress-label"><span>Report Rate</span><span>~30%</span></div>
+        <div class="progress-bar"><div class="progress-fill" style="width:30%"></div></div>
+      </div>
+      <div class="issue-card">
+        <div class="issue-icon">🔬</div>
+        <div class="issue-title">Reproductive Rights</div>
+        <div class="issue-text">The 2022 <em>Dobbs</em> decision overturned <em>Roe v. Wade</em>, eliminating the federal right to abortion and triggering bans or severe restrictions in more than a dozen states. The status of reproductive rights now varies dramatically by state.</div>
+        <div class="progress-label"><span>States with Protections</span><span>~50%</span></div>
+        <div class="progress-bar"><div class="progress-fill" style="width:50%"></div></div>
+      </div>
+      <div class="issue-card">
+        <div class="issue-icon">👩‍💼</div>
+        <div class="issue-title">Leadership Inequality</div>
+        <div class="issue-text">Women make up nearly half the workforce but hold only about 10% of Fortune 500 CEO positions. The "glass ceiling" persists across industries, with women of color facing compounded barriers to executive leadership.</div>
+        <div class="progress-label"><span>Fortune 500 CEOs</span><span>~10%</span></div>
+        <div class="progress-bar"><div class="progress-fill" style="width:10%"></div></div>
+      </div>
+      <div class="issue-card">
+        <div class="issue-icon">🛡️</div>
+        <div class="issue-title">Violence Against Women</div>
+        <div class="issue-text">Domestic violence, sexual assault, and gender-based violence remain pervasive. The Violence Against Women Act (VAWA), first passed in 1994 and reauthorized multiple times, has helped—but violence against women continues at alarming rates.</div>
+        <div class="progress-label"><span>Rates Declined Since 1994</span><span>64%↓</span></div>
+        <div class="progress-bar"><div class="progress-fill" style="width:64%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz">
+  <div class="quiz-inner">
+    <div class="quiz-header reveal">
+      <div class="section-label" style="justify-content:center">Test Your Knowledge</div>
+      <h2 class="section-title">How Much Do You Know<br>About Women's Rights History?</h2>
+    </div>
+
+    <div class="quiz-card reveal" id="quiz-container">
+      <div id="quiz-question-area">
+        <div class="quiz-question" id="q-text"></div>
+        <div class="quiz-options" id="q-options"></div>
+        <div class="quiz-feedback" id="q-feedback"></div>
+        <div class="quiz-nav">
+          <span class="quiz-progress" id="q-progress"></span>
+          <button class="btn btn-dark" id="q-next" style="display:none">Next Question →</button>
+        </div>
+      </div>
+      <div id="quiz-result" style="display:none" class="quiz-score">
+        <div class="quiz-score-num" id="score-num"></div>
+        <div class="quiz-score-label" id="score-label"></div>
+        <button class="btn btn-dark" onclick="startQuiz()" style="margin-top:1.5rem">Try Again</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONCLUSION -->
+<section id="conclusion">
+  <div class="conclusion-inner">
+    <div class="conclusion-eyebrow reveal">The Ongoing Story</div>
+    <h2 class="conclusion-title reveal">The Fight<br><em>Continues</em></h2>
+    <div class="conclusion-divider reveal"></div>
+    <p class="conclusion-text reveal">The Women's Rights Movement reshaped America through courage, organizing, and legal reform. Its victories changed voting, work, education, and freedom—but equality still requires action today.</p>
+    <div class="conclusion-stats reveal">
+      <div class="c-stat">
+        <span class="c-stat-num">175+</span>
+        <span class="c-stat-label">Years of Organizing</span>
+      </div>
+      <div class="c-stat">
+        <span class="c-stat-num">12+</span>
+        <span class="c-stat-label">Landmark Laws Passed</span>
+      </div>
+      <div class="c-stat">
+        <span class="c-stat-num">Millions</span>
+        <span class="c-stat-label">Activists &amp; Organizers</span>
+      </div>
+      <div class="c-stat">
+        <span class="c-stat-num">Still</span>
+        <span class="c-stat-label">Unfinished</span>
+      </div>
+    </div>
+    <div class="reveal">
+      <a href="#hero" class="btn btn-dark">Back to Top</a>
+      &nbsp;&nbsp;
+      <a href="#timeline" class="btn btn-outline" style="color:rgba(253,252,252,0.7);border-color:rgba(253,252,252,0.2)">Explore the Timeline</a>
+    </div>
+  </div>
+</section>
+
+<!-- BIBLIOGRAPHY -->
+<section id="bibliography">
+  <div class="bib-inner">
+    <div class="bib-header reveal">
+      <div class="section-label">Sources &amp; Further Reading</div>
+      <h2 class="section-title">Bibliography</h2>
+      <p class="section-lead">All historical claims in this site draw on the following primary sources, books, legal documents, and scholarly resources. Entries are organized by topic and formatted in MLA 9th edition style.</p>
+    </div>
+
+    <div class="bib-tabs reveal">
+      <div class="bib-tab active" onclick="showBibPanel('books')">📚 Books &amp; Articles</div>
+      <div class="bib-tab" onclick="showBibPanel('primary')">📜 Primary Sources</div>
+      <div class="bib-tab" onclick="showBibPanel('legal')">⚖️ Legal Cases &amp; Laws</div>
+      <div class="bib-tab" onclick="showBibPanel('online')">🌐 Online Resources</div>
+    </div>
+
+    <!-- BOOKS -->
+    <div class="bib-panel active reveal" id="bib-books">
+      <div class="bib-category">
+        <div class="bib-cat-title"><span class="bib-cat-icon">📖</span> Foundational Texts</div>
+        <div class="bib-entry">
+          <div class="bib-num">1</div>
+          <div class="bib-cite">
+            <span class="bib-author">Friedan, Betty.</span> <em>The Feminine Mystique.</em> W. W. Norton &amp; Company, 1963.
+            <span class="bib-note">Seminal work that identified "the problem that has no name"—the dissatisfaction of educated women confined to domestic roles—and launched second-wave feminism.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">2</div>
+          <div class="bib-cite">
+            <span class="bib-author">Steinem, Gloria.</span> <em>Outrageous Acts and Everyday Rebellions.</em> Holt, Rinehart and Winston, 1983.
+            <span class="bib-note">Essays and journalism from one of the movement's defining public voices, covering reproductive rights, workplace equality, and feminist theory.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">3</div>
+          <div class="bib-cite">
+            <span class="bib-author">Davis, Flora.</span> <em>Moving the Mountain: The Women's Movement in America Since 1960.</em> Simon &amp; Schuster, 1991.
+            <span class="bib-note">Comprehensive narrative history of second-wave feminism covering organizations, legislation, and the major figures who shaped the era.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">4</div>
+          <div class="bib-cite">
+            <span class="bib-author">Flexner, Eleanor, and Ellen Fitzpatrick.</span> <em>Century of Struggle: The Woman's Rights Movement in the United States.</em> Enlarged ed., Harvard University Press, 1996.
+            <span class="bib-note">The standard historical account of the suffrage movement and early women's rights organizing from 1820 through the 1920 ratification of the 19th Amendment.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">5</div>
+          <div class="bib-cite">
+            <span class="bib-author">Hartmann, Susan M.</span> <em>The Other Feminists: Activists in the Liberal Establishment.</em> Yale University Press, 1998.
+            <span class="bib-note">Examines how women working within mainstream institutions—universities, labor unions, government agencies—advanced feminist goals from the inside.</span>
+          </div>
+        </div>
+      </div>
+      <div class="bib-category">
+        <div class="bib-cat-title"><span class="bib-cat-icon">🔬</span> Scholarly Studies</div>
+        <div class="bib-entry">
+          <div class="bib-num">6</div>
+          <div class="bib-cite">
+            <span class="bib-author">Murray, Pauli.</span> <em>Song in a Weary Throat: An American Pilgrimage.</em> Harper &amp; Row, 1987.
+            <span class="bib-note">Autobiography of the legal scholar and activist who coined "Jane Crow," co-founded NOW, and influenced civil rights legal strategy. Essential for understanding race and gender intersection.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">7</div>
+          <div class="bib-cite">
+            <span class="bib-author">Rosen, Ruth.</span> <em>The World Split Open: How the Modern Women's Movement Changed America.</em> Viking, 2000.
+            <span class="bib-note">Broad cultural and political history of second-wave feminism, tracing the movement's lasting transformation of American life.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">8</div>
+          <div class="bib-cite">
+            <span class="bib-author">Collins, Gail.</span> <em>When Everything Changed: The Amazing Journey of American Women from 1960 to the Present.</em> Little, Brown and Company, 2009.
+            <span class="bib-note">Accessible history of the transformation in women's lives from the early 1960s through the early 21st century, drawing on interviews and archival research.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">9</div>
+          <div class="bib-cite">
+            <span class="bib-author">Cobble, Dorothy Sue, Linda Gordon, and Astrid Henry.</span> <em>Feminism Unfinished: A Short, Surprising History of American Women's Movements.</em> Liveright Publishing, 2014.
+            <span class="bib-note">Three essays reconsidering the history of feminism, including labor feminism and the contributions of working-class and women of color to the movement.</span>
+          </div>
+        </div>
+      </div>
+      <div class="bib-format-note">
+        <strong>Citation Format:</strong> All book entries above are formatted in <strong>MLA 9th edition</strong> style. For academic papers, use the entry as written. For Chicago or APA style, see your institution's citation guide or <a href="https://www.purdue.edu/owl" target="_blank" rel="noopener">Purdue OWL</a>.
+      </div>
+    </div>
+
+    <!-- PRIMARY SOURCES -->
+    <div class="bib-panel" id="bib-primary">
+      <div class="bib-category">
+        <div class="bib-cat-title"><span class="bib-cat-icon">📜</span> Historical Documents</div>
+        <div class="bib-entry">
+          <div class="bib-num">1</div>
+          <div class="bib-cite">
+            <span class="bib-author">Stanton, Elizabeth Cady, et al.</span> "Declaration of Sentiments." <em>Report of the Woman's Rights Convention, Held at Seneca Falls, N.Y., July 19th and 20th, 1848.</em> John Dick, 1848.
+            <span class="bib-note">The founding document of the American women's rights movement, modeled on the Declaration of Independence. Available via the National Archives and the Library of Congress.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">2</div>
+          <div class="bib-cite">
+            <span class="bib-author">Anthony, Susan B.</span> "Speech After Being Convicted of Voting in the 1872 Presidential Election." 1873.
+            <span class="bib-note">Anthony's defiant address after her arrest and conviction for voting illegally, arguing that the 14th Amendment already granted women citizenship rights. Reprinted in numerous anthologies.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">3</div>
+          <div class="bib-cite">
+            <span class="bib-author">National Organization for Women.</span> "NOW Statement of Purpose." 1966.
+            <span class="bib-note">Founding declaration of NOW, co-drafted by Betty Friedan and Pauli Murray, articulating the organization's goals for full legal equality and enforcement of existing anti-discrimination law.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">4</div>
+          <div class="bib-cite">
+            <span class="bib-author">Murray, Pauli, and Mary O. Eastwood.</span> "Jane Crow and the Law: Sex Discrimination and Title VII." <em>George Washington Law Review,</em> vol. 34, no. 2, 1965, pp. 232–256.
+            <span class="bib-note">Landmark law review article arguing that sex discrimination deserved the same legal treatment as race discrimination—a foundational text for feminist legal theory.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">5</div>
+          <div class="bib-cite">
+            United States. Congress. <em>19th Amendment to the U.S. Constitution: Women's Right to Vote.</em> Ratified August 18, 1920.
+            <span class="bib-note">Full text available at <a href="https://www.archives.gov/milestone-documents/19th-amendment" target="_blank" rel="noopener">National Archives</a>.</span>
+          </div>
+        </div>
+      </div>
+      <div class="bib-category">
+        <div class="bib-cat-title"><span class="bib-cat-icon">🎙️</span> Speeches &amp; Interviews</div>
+        <div class="bib-entry">
+          <div class="bib-num">6</div>
+          <div class="bib-cite">
+            <span class="bib-author">Truth, Sojourner.</span> "Ain't I a Woman?" Speech delivered at the Ohio Women's Rights Convention, Akron, Ohio, 1851. Transcribed by Frances Gage, 1863.
+            <span class="bib-note">Powerful address challenging the exclusion of Black women from the suffrage movement and linking race and gender oppression—essential for understanding intersectionality.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">7</div>
+          <div class="bib-cite">
+            <span class="bib-author">Steinem, Gloria.</span> "Address to the Women of America." <em>National Women's Political Caucus,</em> Washington, D.C., July 1971.
+            <span class="bib-note">Defining speech at the founding of the NWPC, articulating the political goals of the second-wave feminist movement.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEGAL -->
+    <div class="bib-panel" id="bib-legal">
+      <div class="bib-category">
+        <div class="bib-cat-title"><span class="bib-cat-icon">📋</span> Federal Legislation</div>
+        <div class="bib-entry">
+          <div class="bib-num">1</div>
+          <div class="bib-cite">
+            <em>Equal Pay Act of 1963.</em> Pub. L. 88-38, 77 Stat. 56. Codified at 29 U.S.C. § 206(d).
+            <span class="bib-note">First federal law prohibiting sex-based wage discrimination. Full text at <a href="https://www.eeoc.gov/statutes/equal-pay-act-1963" target="_blank" rel="noopener">eeoc.gov</a>.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">2</div>
+          <div class="bib-cite">
+            <em>Civil Rights Act of 1964.</em> Pub. L. 88-352, 78 Stat. 241. Title VII codified at 42 U.S.C. §§ 2000e et seq.
+            <span class="bib-note">Prohibits employment discrimination on the basis of sex, race, color, religion, and national origin. Full text at <a href="https://www.eeoc.gov/statutes/title-vii-civil-rights-act-1964" target="_blank" rel="noopener">eeoc.gov</a>.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">3</div>
+          <div class="bib-cite">
+            <em>Education Amendments of 1972.</em> Pub. L. 92-318, 86 Stat. 235. Title IX codified at 20 U.S.C. §§ 1681–1688.
+            <span class="bib-note">Prohibits sex discrimination in federally funded education programs. Full text at <a href="https://www.justice.gov/crt/title-ix-education-amendments-1972" target="_blank" rel="noopener">justice.gov</a>.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">4</div>
+          <div class="bib-cite">
+            <em>Violence Against Women Act of 1994.</em> Pub. L. 103-322, Title IV. Reauthorized 2000, 2005, 2013, 2022.
+            <span class="bib-note">Landmark legislation addressing domestic violence, sexual assault, and stalking. Full text at <a href="https://www.congress.gov/bill/103rd-congress/house-bill/3355" target="_blank" rel="noopener">congress.gov</a>.</span>
+          </div>
+        </div>
+      </div>
+      <div class="bib-category">
+        <div class="bib-cat-title"><span class="bib-cat-icon">🏛️</span> Supreme Court Decisions</div>
+        <div class="bib-entry">
+          <div class="bib-num">5</div>
+          <div class="bib-cite">
+            <em>Griswold v. Connecticut,</em> 381 U.S. 479 (1965).
+            <span class="bib-note">Established constitutional right to marital privacy; struck down state ban on contraception. Full opinion at <a href="https://supreme.justia.com/cases/federal/us/381/479/" target="_blank" rel="noopener">Justia</a>.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">6</div>
+          <div class="bib-cite">
+            <em>Reed v. Reed,</em> 404 U.S. 71 (1971).
+            <span class="bib-note">First Supreme Court decision to strike down a law for discriminating on the basis of sex under the Equal Protection Clause. Brief written by Ruth Bader Ginsburg.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">7</div>
+          <div class="bib-cite">
+            <em>Roe v. Wade,</em> 410 U.S. 113 (1973). Overruled by <em>Dobbs v. Jackson Women's Health Organization,</em> 597 U.S. 215 (2022).
+            <span class="bib-note">Established federal right to abortion under constitutional privacy doctrine (1973); overturned in 2022. Both opinions at <a href="https://supreme.justia.com" target="_blank" rel="noopener">Justia</a>.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">8</div>
+          <div class="bib-cite">
+            <em>Meritor Savings Bank v. Vinson,</em> 477 U.S. 57 (1986).
+            <span class="bib-note">Unanimous ruling that workplace sexual harassment constitutes illegal sex discrimination under Title VII. Full opinion at <a href="https://supreme.justia.com/cases/federal/us/477/57/" target="_blank" rel="noopener">Justia</a>.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">9</div>
+          <div class="bib-cite">
+            <em>United States v. Virginia,</em> 518 U.S. 515 (1996).
+            <span class="bib-note">Supreme Court ruled VMI's male-only admissions policy unconstitutional; authored by Justice Ruth Bader Ginsburg. Established heightened scrutiny for sex-based classifications.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ONLINE -->
+    <div class="bib-panel" id="bib-online">
+      <div class="bib-category">
+        <div class="bib-cat-title"><span class="bib-cat-icon">🏛️</span> Museums &amp; Archives</div>
+        <div class="bib-entry">
+          <div class="bib-num">1</div>
+          <div class="bib-cite">
+            National Women's History Museum. <em>Women's Rights Movement.</em> <a href="https://www.womenshistory.org" target="_blank" rel="noopener">womenshistory.org</a>, 2024.
+            <span class="bib-note">Comprehensive digital museum with timelines, biographies, and primary source collections covering all eras of U.S. women's history.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">2</div>
+          <div class="bib-cite">
+            National Archives and Records Administration. "Teaching with Documents: The 19th Amendment." <a href="https://www.archives.gov/education/lessons/woman-suffrage" target="_blank" rel="noopener">archives.gov</a>, 2024.
+            <span class="bib-note">Primary source documents, lesson plans, and historical images related to the suffrage movement from the National Archives.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">3</div>
+          <div class="bib-cite">
+            Library of Congress. "Women's Suffrage." <em>American Memory,</em> <a href="https://www.loc.gov/collections/suffragists-oral-histories/" target="_blank" rel="noopener">loc.gov</a>, 2024.
+            <span class="bib-note">Oral history recordings, photographs, pamphlets, and newspapers documenting the suffrage and early women's rights movements.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">4</div>
+          <div class="bib-cite">
+            Smithsonian Institution. "American Women: Trailblazers." <em>National Museum of American History,</em> <a href="https://americanhistory.si.edu/topics/american-women" target="_blank" rel="noopener">americanhistory.si.edu</a>, 2024.
+            <span class="bib-note">Online exhibition featuring artifacts, photographs, and essays on women's contributions to American political, cultural, and social history.</span>
+          </div>
+        </div>
+      </div>
+      <div class="bib-category">
+        <div class="bib-cat-title"><span class="bib-cat-icon">📊</span> Data &amp; Statistics</div>
+        <div class="bib-entry">
+          <div class="bib-num">5</div>
+          <div class="bib-cite">
+            U.S. Bureau of Labor Statistics. "Highlights of Women's Earnings in 2023." <em>BLS Reports,</em> <a href="https://www.bls.gov/opub/reports/womens-earnings/2023/" target="_blank" rel="noopener">bls.gov</a>, 2024.
+            <span class="bib-note">Annual government report on the gender wage gap, occupational earnings by sex, and trends in women's labor force participation.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">6</div>
+          <div class="bib-cite">
+            Center for American Women and Politics (CAWP). "Women in Elected Office 2024." Eagleton Institute of Politics, Rutgers University, <a href="https://cawp.rutgers.edu" target="_blank" rel="noopener">cawp.rutgers.edu</a>, 2024.
+            <span class="bib-note">Definitive data source on women's representation in Congress, state legislatures, and executive offices at federal and state levels.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">7</div>
+          <div class="bib-cite">
+            Equal Employment Opportunity Commission. "Sexual Harassment." <a href="https://www.eeoc.gov/sexual-harassment" target="_blank" rel="noopener">eeoc.gov</a>, 2024.
+            <span class="bib-note">Federal agency statistics on workplace harassment charges, legal definitions, and enforcement data.</span>
+          </div>
+        </div>
+        <div class="bib-entry">
+          <div class="bib-num">8</div>
+          <div class="bib-cite">
+            Guttmacher Institute. "State Abortion Policies." <a href="https://www.guttmacher.org/state-policy/explore/overview-abortion-laws" target="_blank" rel="noopener">guttmacher.org</a>, 2024.
+            <span class="bib-note">Up-to-date state-by-state tracking of abortion laws and restrictions following the 2022 <em>Dobbs</em> decision.</span>
+          </div>
+        </div>
+      </div>
+      <div class="bib-format-note">
+        <strong>For Students:</strong> When using online sources in academic work, always record the URL <em>and</em> the date you accessed the page, as web content can change. Format: Author (if known). "Title of Page." <em>Website Name,</em> URL, Access date.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Women's Rights Movement: Equality Through Action</div>
+  <p class="footer-note">An educational resource for high school and college students.<br>
+  Designed for historical literacy, civic engagement, and an understanding of ongoing social change.</p>
+</footer>
+
+<script>
+// ── SCROLL REVEAL ──
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => observer.observe(el));
+
+// ── PROGRESS BARS ──
+const progressFills = document.querySelectorAll('.progress-fill');
+progressFills.forEach(el => {
+  const w = el.style.width;
+  el.style.width = '0%';
+  setTimeout(() => el.style.width = w, 300);
+});
+
+// ── QUIZ ──
+const questions = [
+  {
+    q: "In what year was the Seneca Falls Convention held, and who were its primary organizers?",
+    opts: ["1836 - Harriet Beecher Stowe and Sojourner Truth", "1848 - Elizabeth Cady Stanton and Lucretia Mott", "1862 - Susan B. Anthony and Frederick Douglass", "1870 - Betty Friedan and Gloria Steinem"],
+    correct: 1,
+    explain: "The 1848 Seneca Falls Convention was co-organized by Elizabeth Cady Stanton and Lucretia Mott. It produced the Declaration of Sentiments, the founding document of the women's rights movement."
+  },
+  {
+    q: "What landmark law, passed in 1972, prohibited sex discrimination in education programs receiving federal funding?",
+    opts: ["The Equal Rights Amendment", "Title VII of the Civil Rights Act", "Title IX of the Education Amendments", "The Equal Pay Act"],
+    correct: 2,
+    explain: "Title IX (1972) prohibits sex discrimination in education programs receiving federal funding. It transformed women's access to higher education and dramatically expanded women's athletics."
+  },
+  {
+    q: "Which Supreme Court case established that workplace sexual harassment constitutes illegal sex discrimination under Title VII?",
+    opts: ["Roe v. Wade (1973)", "Griswold v. Connecticut (1965)", "Meritor Savings Bank v. Vinson (1986)", "Reed v. Reed (1971)"],
+    correct: 2,
+    explain: "Meritor Savings Bank v. Vinson (1986) was a unanimous Supreme Court ruling establishing that sexual harassment in the workplace is illegal sex discrimination under Title VII."
+  },
+  {
+    q: "The 19th Amendment, granting women the right to vote, was ratified in which year?",
+    opts: ["1910", "1914", "1920", "1924"],
+    correct: 2,
+    explain: "The 19th Amendment was ratified in 1920, 72 years after the Seneca Falls Convention first demanded women's suffrage. It was one of the most significant democratic expansions in U.S. history."
+  },
+  {
+    q: "Pauli Murray, co-founder of NOW, coined what term to describe the compounded discrimination faced by Black women?",
+    opts: ["Double bind", "Jane Crow", "Pink ceiling", "Intersectionality"],
+    correct: 1,
+    explain: "Pauli Murray coined the term \"Jane Crow\" to describe how Black women faced discrimination on the basis of both race and sex simultaneously—an early articulation of what we now call intersectionality."
+  },
+  {
+    q: "The National Organization for Women (NOW) was co-founded in 1966 primarily in response to what failure?",
+    opts: ["Congress refusing to pass the Equal Rights Amendment", "The government's failure to enforce Title VII's sex discrimination protections", "The Supreme Court's rejection of suffrage rights", "The passage of laws restricting women from voting"],
+    correct: 1,
+    explain: "NOW was co-founded by Betty Friedan and Pauli Murray in 1966 largely because the Equal Employment Opportunity Commission was failing to enforce Title VII's prohibition on sex discrimination."
+  }
+];
+
+let current = 0, score = 0, answered = false;
+
+function startQuiz() {
+  current = 0; score = 0; answered = false;
+  document.getElementById('quiz-result').style.display = 'none';
+  document.getElementById('quiz-question-area').style.display = 'block';
+  renderQ();
+}
+
+function renderQ() {
+  const q = questions[current];
+  document.getElementById('q-text').textContent = q.q;
+  document.getElementById('q-feedback').textContent = '';
+  document.getElementById('q-next').style.display = 'none';
+  document.getElementById('q-progress').textContent = `Question ${current + 1} of ${questions.length}`;
+  answered = false;
+
+  const opts = document.getElementById('q-options');
+  opts.innerHTML = '';
+  const letters = ['A','B','C','D'];
+  q.opts.forEach((opt, i) => {
+    const div = document.createElement('div');
+    div.className = 'quiz-option';
+    div.innerHTML = `<span class="quiz-option-letter">${letters[i]}</span><span>${opt}</span>`;
+    div.onclick = () => selectAnswer(i);
+    opts.appendChild(div);
+  });
+}
+
+function selectAnswer(i) {
+  if (answered) return;
+  answered = true;
+  const q = questions[current];
+  const opts = document.querySelectorAll('.quiz-option');
+  opts.forEach((opt, idx) => {
+    if (idx === q.correct) opt.classList.add('correct');
+    else if (idx === i && i !== q.correct) opt.classList.add('wrong');
+  });
+  if (i === q.correct) {
+    score++;
+    document.getElementById('q-feedback').textContent = '✓ Correct! ' + q.explain;
+  } else {
+    document.getElementById('q-feedback').textContent = '✗ ' + q.explain;
+  }
+  const nextBtn = document.getElementById('q-next');
+  nextBtn.style.display = 'inline-block';
+  nextBtn.textContent = current < questions.length - 1 ? 'Next Question →' : 'See Results';
+}
+
+document.getElementById('q-next').onclick = () => {
+  current++;
+  if (current < questions.length) {
+    renderQ();
+  } else {
+    showResult();
+  }
+};
+
+function showResult() {
+  document.getElementById('quiz-question-area').style.display = 'none';
+  document.getElementById('quiz-result').style.display = 'block';
+  const pct = Math.round((score / questions.length) * 100);
+  document.getElementById('score-num').textContent = `${score}/${questions.length}`;
+  let msg;
+  if (pct === 100) msg = 'Perfect score. You know your history.';
+  else if (pct >= 80) msg = 'Excellent — a strong grasp of the movement.';
+  else if (pct >= 60) msg = 'Good work. Review the timeline to strengthen your knowledge.';
+  else msg = 'Keep exploring — each section of this site will help fill the gaps.';
+  document.getElementById('score-label').textContent = msg;
+}
+
+startQuiz();
+
+// ── BIBLIOGRAPHY TABS ──
+function showBibPanel(id) {
+  document.querySelectorAll('.bib-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.bib-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('bib-' + id).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
